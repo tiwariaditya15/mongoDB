@@ -1,0 +1,15 @@
+{
+  "name": "mongodb-practice",
+  "version": "1.0.0",
+  "description": "MongoDB",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mocha": "^7.2.0",
+    "mongoose": "^5.9.16"
+  }
+}
