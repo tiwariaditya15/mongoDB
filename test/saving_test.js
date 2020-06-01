@@ -16,6 +16,6 @@ mocha.describe('Testing mocha', () => {
         aditya.save().then( () => {
             assert(aditya.isNew === false);
             done();
-        });
+        }).catch(done);
     });
 });

@@ -14,15 +14,17 @@ mocha.describe('Testing mocha', () => {
         });
 
         aditya.save().then( () => {
+            assert(aditya.isNew === false);
             done();
         });
     });
 
     //tests
     it('Finding Records in database.', (done) => {
-            userModel.find({name: 'aditya'}, result => {
-                //assert(result === null);
-                console.log(result);
+        // this.timeout(10000);
+        // setTimeout(done, 10000);
+            userModel.findOne({name: 'aditya'}).then( (result) => {
+                assert(result.name === 'aditya');
                 done();
             });
             

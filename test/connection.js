@@ -16,7 +16,8 @@ before( done => {
 
 
 beforeEach( done => {
-    mongoose.connection.dropCollection('userlist', (error, result) => {
+    mongoose.connection.dropCollection('userlists', (error, result) => {
+        // console.log(result);
         done();
     });
 });
