@@ -6,15 +6,15 @@ mocha.describe('Testing mocha', () => {
 
     //tests
     it('Record saved succesfully', done => {
-        const aditya = new userModel({
-            name: 'aditya',
+        const jack = new userModel({
+            name: 'jack',
             weight: 66,
             age: 21,
             context: 'Inside saving test.'
         });
 
-        aditya.save().then( () => {
-            assert(aditya.isNew === false);
+        jack.save().then( () => {
+            assert(jack.isNew === false);
             done();
         }).catch(done);
     });

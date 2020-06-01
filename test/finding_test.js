@@ -6,15 +6,15 @@ mocha.describe('Testing mocha', () => {
 
     
     before(done => {
-        const aditya = new userModel({
-            name: 'aditya',
+        const jack = new userModel({
+            name: 'jack',
             weight: 66,
             age: 21,
             context: 'Inside finding test'
         });
 
-        aditya.save().then( () => {
-            assert(aditya.isNew === false);
+        jack.save().then( () => {
+            assert(jack.isNew === false);
             done();
         });
     });
@@ -23,8 +23,8 @@ mocha.describe('Testing mocha', () => {
     it('Finding Records in database.', (done) => {
         // this.timeout(10000);
         // setTimeout(done, 10000);
-            userModel.findOne({name: 'aditya'}).then( (result) => {
-                assert(result.name === 'aditya');
+            userModel.findOne({name: 'jack'}).then( (result) => {
+                assert(result.name === 'jack');
                 done();
             });
             
