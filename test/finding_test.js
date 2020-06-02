@@ -26,7 +26,7 @@ mocha.describe('Testing mocha', () => {
         });
 
         travis.save().then( () => {
-            assert(travis.isNew === false); // this line can be removed
+            // assert(travis.isNew === false); // this line can be removed
             done();
         }).catch(done);
     });

@@ -5,9 +5,9 @@ const assert = require('assert');
 
 mocha.describe('Updating Records', () => {
 
-
+    let dawg;
     beforeEach( done => {
-        const dawg = new userModel({
+         dawg = new userModel({
             name: 'dawg',
             age: 2,
             weight: 15,
@@ -15,16 +15,16 @@ mocha.describe('Updating Records', () => {
         });
 
         dawg.save().then( () => {
-            assert(dawg.isNew === false);
+           
             done();
         });
     });
 
     //test 1
     it('Updating document with name dawg', done => {
-            userModel.findOneAndUpdate({name: 'dawg'}, {name: 'dawg updated'}).then( () => {
-                        userModel.findOne({name: 'dawag'}).then( (result) => {
-                                assert(result === null);
+            userModel.findOneAndUpdate({_id: dawg._id}, {name: 'dawg updated'}).then( () => {
+                        userModel.findOne({_id: dawg._id}).then( (result) => {
+                                assert(result.name === 'dawg updated');
                                 done();
                         });
             });

@@ -14,6 +14,12 @@ before( done => {
     });
 });
 
+// beforeEach( done => {
+//     mongoose.connection.dropCollection('authors', (error, result) => {
+//         // console.log(result);
+//         done();
+//     });
+// });
 
 beforeEach( done => {
     mongoose.connection.dropCollection('userlists', (error, result) => {
